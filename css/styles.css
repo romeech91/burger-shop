@@ -1,0 +1,120 @@
+@charset "UTF-8";
+.wrapper {
+  width: 100%;
+  height: 100%; }
+
+.main__block {
+  min-height: 650px; }
+
+.main {
+  background: url("../img/leaves_bg.jpg") center center no-repeat;
+  background-size: cover; }
+
+.header {
+  padding-top: 12px; }
+  .header__main {
+    min-height: 92px; }
+  .header__main-inner {
+    width: 946px;
+    height: 71px;
+    margin: 0 auto; }
+  .header__logo {
+    float: left; }
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative; }
+
+.header__nav {
+  float: right;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase; }
+  .header__nav-list {
+    color: #fff; }
+  .header__nav-item {
+    display: inline-block;
+    margin-left: 15px; }
+    .header__nav-item:last-child {
+      background-color: red;
+      border-radius: 6px; }
+      .header__nav-item:last-child:hover {
+        background-color: #db0000;
+        cursor: pointer;
+        -webkit-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease; }
+    .header__nav-item:after {
+      content: "•";
+      color: #fff;
+      padding-left: 21px; }
+    .header__nav-item:nth-of-type(6):after {
+      display: none; }
+    .header__nav-item:last-child:after {
+      display: none; }
+    .header__nav-item:last-child {
+      padding: 5px 15px; }
+  .header__nav-item-link {
+    text-decoration: none;
+    color: #fff; }
+    .header__nav-item-link:hover {
+      color: #cccccc;
+      -webkit-transition: .2s ease;
+      -o-transition: .2s ease;
+      transition: .2s ease;
+      text-decoration: underline; }
+
+.main__burger {
+  width: 100%;
+  height: 100%; }
+  .main__burger-pic {
+    float: left; }
+  .main__burger-inner__center {
+    margin: 0 auto;
+    width: 875px;
+    height: 369px; }
+
+.main__burger-text {
+  color: #fff;
+  float: right;
+  margin-top: 128px; }
+  .main__burger-text-1st {
+    color: #f9b43b;
+    font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 85px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .main__burger-text-2nd {
+    color: #ffffff;
+    font-family: 'Lifehack', sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    text-transform: lowercase;
+    display: block;
+    margin-top: 25px; }
+
+.arrow__down {
+  margin-bottom: -127px;
+  margin-left: -20px; }
+
+.nav__list {
+  position: fixed;
+  top: 86px;
+  list-style: none;
+  right: 44px; }
+
+.nav__item {
+  margin-bottom: 9px; }
+  .nav__item-link {
+    background: url("../img/ellipse-2.png") center center no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block; }
+  .nav__item--active {
+    border: 1px solid #fff;
+    border-radius: 50%; }

@@ -1,0 +1,149 @@
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.main__block {
+    min-height: 650px;
+}
+
+.main {
+    background: url('../img/leaves_bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.header {
+    padding-top: 12px;
+    &__main {
+    min-height: 92px;    
+    }
+    &__main-inner {
+        width: 946px;
+        height: 71px;
+        margin: 0 auto;
+    }
+    &__logo {
+        float: left;
+    }
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header__nav {
+    float: right;
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    &-list {
+        color: #fff;
+    }
+    &-item {
+        display: inline-block;
+        margin-left: 15px;
+        &:last-child {
+            background-color: red;
+            border-radius: 6px;
+            &:hover {
+                background-color: darken(red, 7%);
+                cursor: pointer;
+                transition: .2s ease;
+            }
+        }
+        &:after {
+            content: "•";
+            color: #fff;
+            padding-left: 21px;
+        }
+        &:nth-of-type(6):after {
+            display: none;
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &:last-child {
+            padding: 5px 15px;
+        }
+    }
+    &-item-link {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: darken(#fff, 20%);
+            transition: .2s ease;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+.main__burger {
+    width: 100%;
+    height: 100%;
+    &-pic {
+        float: left;
+    }
+    &-inner__center {
+        margin: 0 auto;
+        width: 875px;
+        height: 369px;    
+    }
+}
+
+.main__burger-text {
+    color: #fff;
+    float: right;
+    margin-top: 128px;
+    &-1st {
+        color: #f9b43b;
+        font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 85px;  
+        font-weight: 500;
+        text-transform: uppercase;  
+    }
+    &-2nd {
+        color: #ffffff;
+        font-family: 'Lifehack', sans-serif;
+        font-size: 62px;
+        font-weight: 700;
+        text-transform: lowercase;
+        display: block;
+        margin-top: 25px;
+    }
+}
+
+.arrow__down {
+    margin-bottom: -127px;
+    margin-left: -20px;
+}
+
+.nav {
+    &__list {
+        position: fixed;
+        top: 86px;
+        list-style: none;
+        right: 44px;
+    }
+    &__item {
+        margin-bottom: 9px;
+        &-link {
+            background: url('../img/ellipse-2.png') center center no-repeat;
+            width: 14px;
+            height: 14px;
+            display: block;
+        }
+        &--active {
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+    }
+}
