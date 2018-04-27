@@ -164,6 +164,7 @@ $main-green: #f6b43b;
     line-height: 85px;  
     font-weight: 500;
     text-transform: uppercase; 
+    color: #333537;
 }
 
 .second-block__heading {
@@ -173,26 +174,28 @@ $main-green: #f6b43b;
 
 .features__list {
     list-style: none;
-    border: 1px solid red;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 .features__item {
-    border: 1px solid lightblue;
     display: inline-block;
     width: 300px;
-    vertical-align: middle;
+    vertical-align: top;
     margin: 0 20px;
     &-heading {
         display: block;
         font-family: 'Lifehack', sans-serif;
-        font-size: 22px;
+        font-size: 24px;
         margin: 15px 0;
     }
     &-text {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: rgb(70, 48, 48);
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        font-weight: 300;
+        color: #2f3234;
     }
 }
