@@ -4,11 +4,10 @@
   height: 100%; }
 
 .main__block {
-  min-height: 650px; }
-
-.main {
+  min-height: 650px;
   background: url("../img/leaves_bg.jpg") center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  margin: 0 auto; }
 
 .header {
   padding-top: 12px; }
@@ -82,7 +81,7 @@
   float: right;
   margin-top: 128px; }
   .main__burger-text-1st {
-    color: #f9b43b;
+    color: #f6b43b;
     font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 72px;
     font-weight: 400;
@@ -118,3 +117,44 @@
   .nav__item--active {
     border: 1px solid #fff;
     border-radius: 50%; }
+
+.second-block {
+  min-height: 650px;
+  background: url("../img/bg_white.png") center center no-repeat;
+  background-size: cover;
+  margin: 0 auto; }
+
+.heading-text {
+  display: inline-block;
+  font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 85px;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.second-block__heading {
+  margin: 0 auto;
+  text-align: center; }
+
+.features__list {
+  list-style: none;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.features__item {
+  border: 1px solid lightblue;
+  display: inline-block;
+  width: 300px;
+  vertical-align: middle;
+  margin: 0 20px; }
+  .features__item-heading {
+    display: block;
+    font-family: 'Lifehack', sans-serif;
+    font-size: 22px;
+    margin: 15px 0; }
+  .features__item-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #463030; }
