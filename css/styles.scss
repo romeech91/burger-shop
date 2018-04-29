@@ -11,8 +11,6 @@
     margin: 0 auto;
 }
 
-
-
 .header {
     padding-top: 12px;
     &__main {
@@ -29,14 +27,18 @@
 }
 
 .container {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
-    position: relative;
+    /* min-height: 650px; */
+}
+
+.section {
+    min-height: 100vh;
 }
 
 .header__nav {
     float: right;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-size: 13px;
     font-weight: 500;
     line-height: 30px;
@@ -82,11 +84,8 @@
     }
 }
 
-
-
 .main__burger {
-    width: 100%;
-    height: 100%;
+    height: 650px;
     &-pic {
         float: left;
     }
@@ -149,8 +148,8 @@ $main-green: #f6b43b;
     }
 }
 
-.second-block {
-    min-height: 650px;
+.we_best__block {
+    height: 650px;
     background: url('../img/bg_white.png') center center no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -167,7 +166,7 @@ $main-green: #f6b43b;
     color: #333537;
 }
 
-.second-block__heading {
+.we_best__block__heading {
     margin: 0 auto;
     text-align: center;
 }
@@ -192,10 +191,83 @@ $main-green: #f6b43b;
     }
     &-text {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: rgb(70, 48, 48);
+        color: #463030;
         font-family: 'Ubuntu';
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 26.2px;
         font-weight: 300;
         color: #2f3234;
     }
 }
+
+.reviews {
+    height: 650px;
+    display: flex;
+    &__list {
+        padding: 0; 
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    &__item {
+        position: relative;
+        list-style: none;
+        height: 50%;
+        flex-basis: 25%;
+        &__inner {
+            width: 100%;
+            height: 100%;
+            &-pic {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
+.reviews__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: #fff;
+    opacity: 0;
+    padding: 1.2rem;
+    line-height: 27px;
+    font-size: 1rem;
+    transition: .47s ease;
+    &:hover {
+        opacity: 1;
+    }
+    &-name {
+        font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+    }
+    &-text {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    &-btn {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 0.967rem;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 10px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #3a3939;
+        cursor: pointer;
+        font-weight: 500;
+        transition: .3s;
+        &:hover {
+            background-color: #1f1e1e;
+        }
+    }
+}
+
+
