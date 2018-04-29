@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .wrapper {
   width: 100%;
   height: 100%; }
@@ -41,10 +45,10 @@
     display: inline-block;
     margin-left: 15px; }
     .header__nav-item:last-child {
-      background-color: red;
+      background-color: #e45028;
       border-radius: 6px; }
       .header__nav-item:last-child:hover {
-        background-color: #db0000;
+        background-color: #ce401a;
         cursor: pointer;
         -webkit-transition: .2s ease;
         -o-transition: .2s ease;
@@ -58,7 +62,7 @@
     .header__nav-item:last-child:after {
       display: none; }
     .header__nav-item:last-child {
-      padding: 5px 15px; }
+      padding: 3px 15px; }
   .header__nav-item-link {
     text-decoration: none;
     color: #fff; }
@@ -83,7 +87,7 @@
   float: right;
   margin-top: 128px; }
   .main__burger-text-1st {
-    color: #f6b43b;
+    color: #f8b43a;
     font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 63px;
     font-weight: 400;
@@ -134,7 +138,7 @@
   line-height: 85px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #333537; }
+  color: #2f3234; }
 
 .we_best__block__heading {
   margin: 0 auto;
