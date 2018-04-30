@@ -23,8 +23,8 @@ body {
     min-height: 92px;    
     }
     &__main-inner {
-        width: 946px;
-        height: 71px;
+        max-width: 946px;
+        max-height: 71px;
         margin: 0 auto;
     }
     &__logo {
@@ -111,6 +111,7 @@ body {
     flex-direction: column;
     margin-top: 128px;
     &-1st {
+        margin: 0;
         color: $yellow;
         font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 63px;
@@ -126,7 +127,7 @@ body {
         font-weight: 700;
         text-transform: lowercase;
         display: flex;
-        margin-top: 25px;
+        margin-top: 15px;
     }
 }
 
@@ -210,6 +211,19 @@ body {
         line-height: 26.2px;
         font-weight: 300;
         color: $dark;
+    }
+    &-pic {
+        min-height: 130px;
+        &_meat {
+            background: url('../img/icons/best/best_meat.svg') center center no-repeat;
+        }
+        &_hand {
+            background: url('../img/icons/best/best_hand.svg') center center no-repeat;
+        }
+        &_natural {
+            background: url('../img/icons/best/best_natural.svg') center center no-repeat;
+        }
+        
     }
 } 
 
