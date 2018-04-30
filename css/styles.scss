@@ -92,10 +92,13 @@ body {
 
 .main__burger {
     height: 650px;
+    display: flex;
+    flex-direction: column;
     &-pic {
-        float: left;
+        display: flex;
     }
     &-inner__center {
+        display: flex;
         margin: 0 auto;
         width: 875px;
         height: 369px;    
@@ -104,7 +107,8 @@ body {
 
 .main__burger-text {
     color: #fff;
-    float: right;
+    display: flex;
+    flex-direction: column;
     margin-top: 128px;
     &-1st {
         color: $yellow;
@@ -121,7 +125,7 @@ body {
         font-size: 60px;
         font-weight: 700;
         text-transform: lowercase;
-        display: block;
+        display: flex;
         margin-top: 25px;
     }
 }
@@ -181,10 +185,14 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .features__item {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 28%;
     width: 300px;
     vertical-align: top;
     margin: 0 20px;
