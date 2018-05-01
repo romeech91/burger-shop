@@ -1,6 +1,6 @@
 $dark: #2f3234;
 $yellow: #f8b43a;
-
+$orange: #f9b43b;
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -17,33 +17,32 @@ body {
     margin: 0 auto;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .header {
     padding-top: 12px;
     &__main {
     min-height: 92px;    
     }
     &__main-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         max-width: 946px;
         max-height: 71px;
         margin: 0 auto;
     }
-    &__logo {
-        float: left;
-    }
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    /* min-height: 650px; */
 }
 
 .section {
     min-height: 100vh;
+    width: 100%;
 }
 
 .header__nav {
-    float: right;
     font-family: 'Ubuntu', sans-serif;
     font-size: 13px;
     font-weight: 500;
@@ -297,5 +296,91 @@ body {
     }
 }
 
+.team-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.team {
+    background: url('../img/bg__team.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    &__block {
+        height: 100vh;
+        background-color: #2e2c2c;
+        opacity: 0.9;
+        width: 100%;
+        &__inner {
+        }
+        &-heading {
+            color: $yellow;
+            text-transform: uppercase;
+            font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4.4rem;
+            font-weight: 300;
+            padding-left: 6rem;
+        }
+        &__list {
+            list-style: none;
+            margin-left: 4rem;
+            color: #fff;
+        }
+        &__item {
+            text-transform: uppercase;
+            font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            
+        }
+    }
+}
+
+.block__item-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    &:hover {
+        color: $yellow;
+    }
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid $yellow;
+        margin-right: 0.8rem;
+    }
+}
 
 
+.menu {
+    background: url('../img/bg__menu.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.menu__block-heading {
+    color: #fff;
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4rem;
+}
+
+.container-menu {
+    width: 100%;
+}
+
+.burgers-info {
+    background-color: $orange;
+    
+}
