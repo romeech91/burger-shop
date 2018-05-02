@@ -504,3 +504,7 @@ body {
 
 .order__right-item {
   margin-bottom: 1rem; }
+
+.map {
+  background: url("../img/bg__map.png") no-repeat;
+  background-size: cover; }
