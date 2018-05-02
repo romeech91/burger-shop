@@ -384,3 +384,112 @@ body {
     background-color: $orange;
     
 }
+
+.order {
+    background: url('../img/bg__order.png') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.order__heading__block {
+    text-align: center;
+}
+.order__heading {
+    margin: 0;
+    color: $yellow;
+    text-transform: uppercase;
+    font-family: 'Gagalin', Verdana, GenevaTahoma, sans-serif;
+    font-size: 4.4rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.order__form {
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size: 0.9rem;
+    &-input {
+        border-radius: 5px;
+        width: 10rem;
+        margin-bottom: 0.8rem;
+    }
+
+}
+
+.order__form-input__street {
+    width: 22rem;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+}
+.order__form-input__small {
+    border-radius: 5px;
+    width: 4rem;
+}
+
+.order__form-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 24rem;
+    &__name {
+        flex-grow: 1;
+    }
+    &__phone {
+        flex-grow: 1;
+    }
+    &__street {
+        flex-grow: 2;
+    }
+    &__adress {
+        display: flex;
+    }
+}
+
+.order__form-textarea {
+    border-radius: 5px;
+}
+
+.adress__item {
+    margin-right: 1.6rem;
+}
+
+.order__form-text2 {
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+.order__btn {
+    border-radius: 6px;
+    background-color: #e45028;
+    border: none;
+    padding: 7px 16px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background-color: darken(#e45028, 10%);
+    }
+}
+
+.order__btn-clear {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        color: darken(#fff, 50%);
+        text-decoration: underline;
+    }
+}
+
+.order__right-item {
+    margin-bottom: 1rem;
+}
