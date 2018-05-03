@@ -1,3 +1,7 @@
+h4 {
+    margin: 0;
+}
+
 $dark: #2f3234;
 $yellow: #f8b43a;
 $orange: #f9b43b;
@@ -338,6 +342,31 @@ body {
     }
 }
 
+.block__item-drop {
+    display: flex;
+    margin-left: 22px;
+    margin-top: 13px;
+    &-img {
+        width: 100px;
+        height: 100px;
+        background: url('../img/operator.jpg') center center no-repeat;
+        border-radius: 50%;
+    }
+    &-text {
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: none;
+        font-size: 0.9rem;
+        max-width: 15rem;
+        margin-left: 1rem;
+        &__heading {
+            margin: 0;
+        }
+        &__contain {
+            margin-top: 10px;
+        }
+    }
+}
+
 .block__item-btn {
     cursor: pointer;
     border: none;
@@ -497,4 +526,12 @@ body {
 .map {
     background: url('../img/bg__map.png') no-repeat;
     background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('../img/bg__footer.png') center center no-repeat;
+    background-size: contain;
 }

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+h4 {
+  margin: 0; }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -336,6 +339,28 @@ body {
       font-weight: 300;
       margin-bottom: 1rem; }
 
+.block__item-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 22px;
+  margin-top: 13px; }
+  .block__item-drop-img {
+    width: 100px;
+    height: 100px;
+    background: url("../img/operator.jpg") center center no-repeat;
+    border-radius: 50%; }
+  .block__item-drop-text {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: none;
+    font-size: 0.9rem;
+    max-width: 15rem;
+    margin-left: 1rem; }
+    .block__item-drop-text__heading {
+      margin: 0; }
+    .block__item-drop-text__contain {
+      margin-top: 10px; }
+
 .block__item-btn {
   cursor: pointer;
   border: none;
@@ -508,3 +533,10 @@ body {
 .map {
   background: url("../img/bg__map.png") no-repeat;
   background-size: cover; }
+
+.footer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../img/bg__footer.png") center center no-repeat;
+  background-size: contain; }
