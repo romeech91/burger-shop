@@ -43,8 +43,8 @@ body {
 }
 
 .section {
-    min-height: 100vh;
-    width: 100%;
+    height: 100vh;
+    min-height: 650px;
 }
 
 .header__nav {
@@ -97,16 +97,40 @@ body {
 .main__burger {
     height: 650px;
     display: flex;
-    flex-direction: column;
+    &-inner {
+        display: flex;
+        justify-content: center;
+    }
     &-pic {
-        display: flex;
+        
     }
-    &-inner__center {
+    /* &-inner__center {
         display: flex;
-        margin: 0 auto;
-        max-width: 875px;
-        height: 369px;    
-    }
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;  
+    } */
+}
+
+.title-dark {
+    color: $dark;
+}
+
+.title-white {
+    color: #fff;
+}
+
+.title-yellow {
+    color: $yellow;
+}
+
+.section-title {
+    font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .main__burger-text {
@@ -114,16 +138,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 128px;
-    &-1st {
-        margin: 0;
-        color: $yellow;
-        font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 63px;
-        font-weight: 400;
-        line-height: 85px;  
-        font-weight: 500;
-        text-transform: uppercase;  
-    }
     &-2nd {
         color: #ffffff;
         font-family: 'Lifehack', sans-serif;
@@ -131,7 +145,7 @@ body {
         font-weight: 700;
         text-transform: lowercase;
         display: flex;
-        margin-top: 15px;
+        max-width: 383px;
     }
 }
 
@@ -167,18 +181,13 @@ body {
     background: url('../img/bg_white.png') center center no-repeat;
     background-size: cover;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }   
 
-.heading-text {
-    display: inline-block;
-    font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 85px;  
-    font-weight: 500;
-    text-transform: uppercase; 
-    color: $dark;
-}
+
 
 .we_best__block__heading {
     margin: 0 auto;
@@ -301,23 +310,24 @@ body {
     }
 }
 
-.team-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-}
 
 .team {
     background: url('../img/bg__team.jpg') no-repeat;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
+    position: relative;
     &__block {
-        height: 100vh;
+        height: 100%;
         background-color: #2e2c2c;
         opacity: 0.9;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &__inner {
+            display: flex;
+            flex-direction: column;
         }
         &-heading {
             color: $yellow;
@@ -326,10 +336,10 @@ body {
             font-size: 4.4rem;
             font-weight: 300;
             padding-left: 6rem;
+            margin: 0;
         }
         &__list {
             list-style: none;
-            margin-left: 4rem;
             color: #fff;
         }
         &__item {
@@ -343,15 +353,27 @@ body {
     }
 }
 
+.team-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+
 .block__item-drop {
     display: flex;
+    height: 0;
+    overflow: hidden;
     margin-left: 22px;
     margin-top: 13px;
     &-img {
         width: 100px;
         height: 100px;
-        background: url('../img/operator.jpg') center center no-repeat;
         border-radius: 50%;
+        overflow: hidden;
+        flex-basis: 100%;
+        max-width: 100px;
     }
     &-text {
         font-family: 'Ubuntu', sans-serif;
@@ -365,6 +387,18 @@ body {
         &__contain {
             margin-top: 10px;
         }
+    }
+}
+
+.team__block__item--active {
+    .block__item-btn {
+        color: $yellow;
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+    .block__item-drop {
+        height: auto;
     }
 }
 
@@ -546,8 +580,12 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    &-top {
+        padding-top: 5px;
+    }
     &-bottom {
         display: flex;
+        padding-top: 7px;
     }
     &-img {
         background: url('../img/icons/phone.svg') center center no-repeat;
@@ -556,6 +594,7 @@ body {
     }
     &-number {
         color: red;
+        text-decoration: none;
     }
 }
 
