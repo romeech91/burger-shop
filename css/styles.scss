@@ -200,17 +200,19 @@ body {
     height: 100%;
     background-position: center center;
     background-size: cover;
-    &-bg {
-        background-color: #463030;
-        width: 100%;
-        opacity: 0.45;
+    &__block {
+        display: flex;
     }
-    &-text {
+    &__block-txt {
         font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 24px;
         font-weight: 400;
         text-transform: uppercase;
         transform: rotate(270deg);
+        color: #fff;
+        position: absolute;
+        margin: 0;
+        padding: 0;
     }
 }
 
