@@ -102,14 +102,16 @@ body {
 }
 
 .main__burger {
-    height: 650px;
     display: flex;
     &-inner {
         display: flex;
         justify-content: center;
     }
-    &-pic {
-        
+    &-block {
+        max-height: rem(200px);
+    }
+    &-block-pic {
+        max-width: rem(500px);
     }
 }
 
@@ -150,9 +152,14 @@ body {
     }
 }
 
+.main__block-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .arrow__down {
-    margin-bottom: -127px;
-    margin-left: -20px;
+    display: flex;
 } 
 
 .nav {
