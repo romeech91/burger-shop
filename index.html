@@ -284,81 +284,72 @@
 			
 		</section>
 		<section class="order section">
-			<div class="container">
-				<div class="order__heading__block"><h2 class="section-title title-yellow">Закажите доставку</h2></div>
-				
-
-				<form class="order__form">
+		  <div class="container">
+			<h2 class="section-title title-yellow order__head">Закажите доставку</h2>
+			<form class="form">
+				<div class="left-form">
+					<div class="form__row">
+						<label class="form__block">
+							<div class="form__title">Имя</div>
+							<input type="text" class="form__input">
+						</label>
+						<label class="form__block">
+							<div class="form__title">Телефон</div>
+							<input type="text" class="form__input">
+						</label>
+					</div>
+					<div class="form__row">
+						<label class="form__block">
+							<div class="form__title">Улица</div>
+							<input type="text" class="form__input">
+						</label>
+					</div>
+					<div class="form__row">
+						<label class="form__block">
+							<div class="form__title">Дом</div>
+							<input type="text" class="form__input">
+						</label>
+						<label class="form__block">
+							<div class="form__title">Корпус</div>
+							<input type="text" class="form__input">
+						</label>
+						<label class="form__block">
+							<div class="form__title">Квартира</div>
+							<input type="text" class="form__input">
+						</label>
+						<label class="form__block">
+							<div class="form__title">Этаж</div>
+							<input type="text" class="form__input">
+						</label>
+						
+					</div>
+				</div>
+				<div class="right-form"> <!-- #right side -->
+					<label>
+						<div class="form__title">Комментарий</div>
+						<textarea class="form__textarea"></textarea>
+					</label>
+					<label class="radio__buttons">
+						<input type="radio" name="r1" class="radio__buttons-input">
+						<div class="form__title">Потребуется сдача</div>
+						
+					</label>
+					<label class="radio__buttons">
+						<input type="radio" name="r1" class="radio__buttons-input">
+						<div class="form__title">Оплата по карте</div>
+					</label>
+					<label class="form__checkbox">
+						<input type="checkbox" checked>
+						<div class="checked__title">Не перезванивать</div>
+					</label>
+					<div class="form__buttons">
+						<button href="#" class="form__button-order">Заказать</button>
+						<button href="#" class="form__button-reset">Очистить</button>
+					</div>
 					
-					<div class="order__form-left">
-						<div class="order__form-left__name">
-							<label>
-								<span class="order__form-text">Имя</span> <br>
-								<input type="text" class="order__form-input">
-							</label>
-						</div>
-						<div class="order__form-left__phone">
-							<label>
-								<span class="order__form-text">Телефон</span> <br> 
-								<input type="text" class="order__form-input">
-							</label>
-						</div>
-						<div class="order__form-left__street">
-							<label>
-								<span class="order__form-text">Улица</span> <br> 
-								<input type="text" class="order__form-input__street">
-							</label>
-						</div>
-						<div class="order__form-left__adress">
-							<label class="adress__item">
-								<span class="order__form-text">Дом</span> <br> 
-								<input type="text" class="order__form-input__small">
-							</label>
-							<label class="adress__item">
-								<span class="order__form-text">Корпус</span> <br> 
-								<input type="text" class="order__form-input__small">
-							</label>
-							<label class="adress__item">
-								<span class="order__form-text">Квартира</span> <br> 
-								<input type="text" class="order__form-input__small">
-							</label>
-							<label class="adress__item">
-								<span class="order__form-text">Этаж</span> <br> 
-								<input type="text" class="order__form-input__small">
-							</label>
-						</div>
-					</div>
-
-					<div class="order__form-right">
-						<div class="order__form-right__comment order__right-item">
-							<label class="adress__item">
-								<span class="order__form-text">Коментарий</span> <br> 
-								<textarea name="" id="" cols="35" rows="4" class="order__form-textarea"></textarea>
-							</label>
-						</div>
-						<div class="order__form-right__radio order__right-item">
-							<label>
-								<input type="radio" name="paymeth"><span class="order__form-text2">Потребуется сдача</span>
-							</label>
-							<label>
-								<input type="radio" name="paymeth"><span class="order__form-text2">Оплата по карте</span>
-							</label>
-						</div>
-						<div class="order__form-right-check order__right-item">
-							<label>
-								<input type="checkbox" checked>
-								<span class="order__form-text">Не перезванивать</span>
-							</label>
-						</div>
-						<div class="order__form-right-btns order__right-item">
-							<button class="order__btn">Заказать</button>
-							<button class="order__btn-clear">Очистить</button>
-						</div>
-	
-					</div>
-				</form>
-
-			</div>
+				</div>
+			</form>
+		  </div>
 		</section>
 		<section class="map section">
 			<footer class="footer">
