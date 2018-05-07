@@ -32,7 +32,10 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .header {
     padding-top: 12px;
@@ -569,6 +572,9 @@ body {
 .order {
     background: url('../img/bg__order.png') center center / cover no-repeat;
     color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .order__head {
@@ -578,7 +584,6 @@ body {
 
 .form {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .form__row {
