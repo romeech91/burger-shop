@@ -596,7 +596,7 @@ body {
 
 .form__block {
     flex: 1;
-    margin-right: 55px;
+    margin-right: 20px;
     &:last-child {
         margin-right: 0;
     }
@@ -620,7 +620,7 @@ body {
 .left-form {
     max-width: rem(500px);
     width: 50%;
-    margin-right: rem(55px);
+    margin-right: rem(20px);
 }
 .right-form {
     max-width: rem(500px);
