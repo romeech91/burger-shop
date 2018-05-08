@@ -1,15 +1,23 @@
-@media (max-width: 1200px) {
-  .container {
-    width: 970px; } }
+/* @media (max-width: 1200px) { //desctop
+    .container {
+        width: 970px;
+    }
+}
 
 @media (max-width: 992px) {
-  .container {
-    width: 750px; } }
+    .container {
+        width: 750px;
+    }
+}
 
 @media (max-width: 768px) {
-  .container {
-    width: 480px; } }
+    .container {
+        width: 480px;
+    }
+}
 
 @media (max-width: 480px) {
-  .container {
-    width: 95%; } }
+    .container {
+        width: 95%;
+    }
+} */

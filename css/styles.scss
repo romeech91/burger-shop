@@ -1,5 +1,5 @@
 @import url("adaptive/media.css");
-
+@import "settings/mixins.scss";
 h4 {
     margin: 0;
 }
@@ -21,6 +21,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
 }
+
 .wrapper {
     position: relative;
     width: 100%;
@@ -39,15 +40,32 @@ body {
 
 .container {
     max-width: 1100px;
+    min-height: 650px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    @include desktop {
+        width: 970px;
+    }
+    @include laptop {
+        width: 750px;
+    }
+    @include tablets {
+        width: 480px;
+    }
+    @include phones {
+        width: 95%;
+    }
 }
 
+.main-sec__container {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
 
 .header {
     &__main {
-    min-height: 92px;    
+        min-height: 92px;
     }
     &__main-inner {
         display: flex;
@@ -60,8 +78,7 @@ body {
 }
 
 .section {
-    height: 100vh;
-    min-height: 650px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -79,7 +96,7 @@ body {
         display: inline-block;
         margin-left: 15px;
         &:last-child {
-            background-color:#e45028;
+            background-color: #e45028;
             border-radius: 6px;
             &:hover {
                 background-color: darken(#e45028, 7%);
@@ -125,7 +142,7 @@ body {
         /* max-height: rem(200px); */
     }
     &-block-pic {
-       /*  max-width: rem(500px); */
+        /*  max-width: rem(500px); */
     }
 }
 
@@ -175,7 +192,7 @@ body {
 
 .arrow__down {
     display: flex;
-} 
+}
 
 .nav {
     &__list {
@@ -211,23 +228,21 @@ body {
     right: 0;
     bottom: 0;
     margin: 0;
-    
 }
 
 .acco__item--active {
-        .acco__item__content {
-            width: rem(500px);
-        }
-        .acco__item__block-txt {
-            color: $yellow;
-        }
+    .acco__item__content {
+        width: rem(500px);
+    }
+    .acco__item__block-txt {
+        color: $yellow;
+    }
 }
 
 .acco__item {
     list-style: none;
     float: left;
     height: 100%;
-    
     &__block {
         background-size: cover;
         background-position: center center;
@@ -240,7 +255,6 @@ body {
         align-items: center;
         cursor: pointer;
         float: left;
-        
         &:hover {
             .acco__item__block-txt {
                 color: $yellow;
@@ -260,13 +274,11 @@ body {
     }
 }
 
-
-
 .acco__item__content {
     width: 0;
     height: 100%;
     color: #fff;
-    background: rgba(47,50,52,.93);
+    background: rgba(47, 50, 52, .93);
     overflow: hidden;
     float: left;
     font-family: 'Ubuntu', sans-serif;
@@ -286,9 +298,12 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-}   
+}
 
-
+.we_best__container {
+    flex-direction: column;
+    justify-content: center;
+}
 
 .we_best__block__heading {
     margin: 0 auto;
@@ -337,15 +352,15 @@ body {
         &_natural {
             background: url('../img/icons/best/best_natural.svg') center center no-repeat;
         }
-        
     }
-} 
+}
 
 .reviews {
     height: 650px;
     display: flex;
+    overflow: hidden;
     &__list {
-        padding: 0; 
+        padding: 0;
         margin: 0;
         display: flex;
         flex-direction: row;
@@ -357,6 +372,15 @@ body {
         list-style: none;
         height: 50%;
         flex-basis: 25%;
+        @include laptop {
+            flex-basis: 25%;
+        }
+        @include tablets {
+            flex-basis: 25%;
+        }
+        @include phones {
+            flex-basis: 50%;
+        }
         &__inner {
             width: 100%;
             height: 100%;
@@ -385,6 +409,7 @@ body {
     font-size: 1rem;
     transition: .47s ease;
     overflow: hidden;
+    @include tablets {}
     &:hover {
         opacity: 1;
     }
@@ -393,6 +418,12 @@ body {
     }
     &-text {
         font-family: 'Ubuntu', sans-serif;
+        @include tablets {
+            display: none;
+        }
+        @include phones {
+            display: none;
+        }
     }
     &-btn {
         font-family: 'Ubuntu', sans-serif;
@@ -412,13 +443,19 @@ body {
     }
 }
 
-
 .team {
     background: url('../img/bg__team.jpg') no-repeat;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
     position: relative;
+    &__title {
+        display: flex;
+        margin-left: rem(15px);
+        @include tablets {
+            justify-content: center;
+        }
+    }
     &__block {
         height: 100%;
         background-color: #2e2c2c;
@@ -450,7 +487,6 @@ body {
             font-size: 1rem;
             font-weight: 300;
             margin-bottom: 1rem;
-            
         }
     }
 }
@@ -461,6 +497,9 @@ body {
     top: 0;
     bottom: 0;
     width: 50%;
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .block__item-drop {
@@ -526,7 +565,6 @@ body {
     }
 }
 
-
 .menu {
     background: url('../img/bg__menu.jpg') center center no-repeat;
     background-size: cover;
@@ -549,7 +587,6 @@ body {
 
 .burgers-info {
     background-color: $orange;
-    
 }
 
 .order__btn {
@@ -594,6 +631,11 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.form__container {
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form {
@@ -649,6 +691,9 @@ body {
     &__radio {
         display: flex;
         flex-direction: row;
+        @include tablets {
+        justify-content: center;
+    }
     }
 }
 
@@ -690,7 +735,7 @@ body {
     }
 }
 
-.radio__buttons-input:checked + .radio__buttons--style::before {
+.radio__buttons-input:checked+.radio__buttons--style::before {
     transform: scale(1);
 }
 
@@ -698,6 +743,9 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: rem(15px);
+    @include tablets {
+        justify-content: center;
+    }
     &-basic {
         display: none;
     }
@@ -727,17 +775,17 @@ body {
     }
 }
 
-.form__checkbox-basic:checked + .form__checkbox--style::before {
+.form__checkbox-basic:checked+.form__checkbox--style::before {
     transform: scale(1);
 }
 
-
-.checked__title {
-}
+.checked__title {}
 
 .form__buttons {
     display: flex;
-    
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .form__button-order {
@@ -809,12 +857,11 @@ body {
     }
 }
 
-.footer__right  {
+.footer__right {
     width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
 }
 
 .footer__container {
@@ -825,20 +872,19 @@ body {
 }
 
 .icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 17px;
-  fill: #595959;
-  width: 25px;
-  height: 25px;
-  transition: .4s;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 17px;
+    fill: #595959;
+    width: 25px;
+    height: 25px;
+    transition: .4s;
 }
+
 .icon:hover {
-    fill: #fff; 
+    fill: #fff;
 }
 
 .icon:first-child {
-    margin-left: 0; 
+    margin-left: 0;
 }
-
-

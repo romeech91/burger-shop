@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Mr.Burger</title>
 	<link rel="stylesheet" href="fonts/stylesheet.css">
-	<link rel="stylesheet" href="css/styles.scss">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="shortcut icon" href="img/icons/favicon.png">
@@ -12,34 +11,35 @@
 <body>
 	<main class="wrapper">
 		<section class="main__block section">
-			<div class="container">
-			<header class="header">
-				<div class="header__main">
-					<div class="header__main-inner">
-					    <div class="header__logo">
-						    <div class="header__logo-img">
-							    <img src="img/icons/logo.svg" alt="логотип компании Mr.Burger">
-						    </div>
-					    </div>
-					    <nav class="header__nav">
-						  <ul class="header__nav-list">
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">О нас</a></li>
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">Бургеры</a></li> 
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">Команда</a></li>
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">Меню</a></li>
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">Отзывы</a></li>
-							  <li class="header__nav-item"><a href="#" class="header__nav-item-link">Контакты</a></li>
-							  <li class="header__nav-item nav-item--button"><a href="#" class="header__nav-item-link">Заказать</a></li>
-						  </ul>
-					    </nav>
+			<div class="container main-sec__container">
+				<header class="header">
+					<div class="header__main">
+						<div class="header__main-inner">
+							<div class="header__logo">
+								<div class="header__logo-img">
+									<img src="img/icons/logo.svg" alt="логотип компании Mr.Burger">
+								</div>
+							</div>
+							<nav class="header__nav">
+								<ul class="header__nav-list">
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">О нас</a></li>
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">Бургеры</a></li> 
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">Команда</a></li>
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">Меню</a></li>
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">Отзывы</a></li>
+									<li class="header__nav-item"><a href="#" class="header__nav-item-link">Контакты</a></li>
+									<li class="header__nav-item nav-item--button"><a href="#" class="header__nav-item-link">Заказать</a></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
-				</div>
-			</header>
+				</header>
+			
 			<div class="main__burger">
 				<div class="main__burger-inner">
 					
 						<div class="main__burger-block">
-								<img src="img/burger_main.png" alt="главный бургер" class="main__burger-block-pic">
+							<img src="img/burger_main.png" alt="главный бургер" class="main__burger-block-pic">
 							
 						</div>
 						<div class="main__burger-text">
@@ -56,7 +56,7 @@
 		</section>
 		
 		<section class="we_best__block section">
-			<div class="container">
+			<div class="container we_best__container">
 				<div class="we_best__block__heading">
 					<h2 class="section-title title-dark">Мы лучшие</h2>
 				</div>
@@ -90,7 +90,7 @@
 			<div class="team-container">
 				<div class="team__block">
 					<div class="team__block__inner">
-						<h2 class="section-title title-yellow">Команда</h2>
+						<h2 class="section-title title-yellow team__title">Команда</h2>
 						<div class="team__block__accordeon">
 							<ul class="team__block__list">
 								<li class="team__block__item">
@@ -286,7 +286,7 @@
 			
 		</section>
 		<section class="order section">
-		  <div class="container">
+		  <div class="container form__container">
 			<h2 class="section-title title-yellow order__head">Закажите доставку</h2>
 			<form class="form">
 				<div class="left-form">
@@ -349,8 +349,8 @@
 						<div class="checked__title">Не перезванивать</div>
 					</label>
 					<div class="form__buttons">
-						<button href="#" class="form__button-order">Заказать</button>
-						<button href="#" class="form__button-reset">Очистить</button>
+						<button type="submit" href="#" class="form__button-order">Заказать</button>
+						<button type="reset" href="#" class="form__button-reset">Очистить</button>
 					</div>
 					
 				</div>
