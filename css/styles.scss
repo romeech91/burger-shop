@@ -74,6 +74,7 @@ body {
         max-width: 946px;
         max-height: 71px;
         margin: 0 auto;
+        margin-top: rem(12px);
     }
 }
 
@@ -188,6 +189,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: rem(50px);
+    margin-bottom: rem(20px);
 }
 
 .arrow__down {
@@ -326,6 +328,7 @@ body {
     max-width: 300px;
     vertical-align: top;
     margin: 0 20px;
+    overflow: hidden;
     &-heading {
         display: block;
         font-family: 'Lifehack', sans-serif;
@@ -336,10 +339,14 @@ body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #463030;
         font-family: 'Ubuntu';
-        font-size: 15px;
+        font-size: 0.875rem;
         line-height: 26.2px;
+        @include phones {
+            line-height: 1.2;
+        }
         font-weight: 300;
         color: $dark;
+        overflow: hidden;
     }
     &-pic {
         min-height: 130px;
@@ -376,7 +383,7 @@ body {
             flex-basis: 25%;
         }
         @include tablets {
-            flex-basis: 25%;
+            flex-basis: 50%;
         }
         @include phones {
             flex-basis: 50%;
@@ -409,7 +416,18 @@ body {
     font-size: 1rem;
     transition: .47s ease;
     overflow: hidden;
-    @include tablets {}
+    @include laptop {
+        line-height: 1.3rem;
+    }
+    @include tablets {
+        line-height: 1.1rem;
+    }
+    @include phones {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
     &:hover {
         opacity: 1;
     }
@@ -418,9 +436,6 @@ body {
     }
     &-text {
         font-family: 'Ubuntu', sans-serif;
-        @include tablets {
-            display: none;
-        }
         @include phones {
             display: none;
         }
@@ -437,6 +452,9 @@ body {
         cursor: pointer;
         font-weight: 500;
         transition: .3s;
+        @include phones {
+            margin-top: 0.65rem;
+        }
         &:hover {
             background-color: #1f1e1e;
         }
@@ -487,6 +505,9 @@ body {
             font-size: 1rem;
             font-weight: 300;
             margin-bottom: 1rem;
+            @include tablets {
+                font-size: 1.5rem;
+            }
         }
     }
 }
