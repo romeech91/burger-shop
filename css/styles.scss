@@ -1,5 +1,16 @@
-@import url("adaptive/media.css");
+
 @import "settings/mixins.scss";
+
+html {
+    font-size: 16px;
+    @include tablets {
+        font-size: 14px;
+    }
+    @include phones {
+        font-size: 13px;
+    }
+}
+
 h4 {
     margin: 0;
 }
@@ -25,7 +36,8 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }
 
 .main__block {
@@ -39,18 +51,19 @@ body {
 }
 
 .container {
-    max-width: 1100px;
-    min-height: 650px;
+    max-width: rem(1100px);
+    width: 100%;
+    min-height: rem(650px);
     margin: 0 auto;
     display: flex;
     @include desktop {
-        width: 970px;
+        width: rem(970px);
     }
     @include laptop {
-        width: 750px;
+        width: rem(750px);
     }
     @include tablets {
-        width: 480px;
+        width: rem(480px);
     }
     @include phones {
         width: 95%;
@@ -65,14 +78,14 @@ body {
 
 .header {
     &__main {
-        min-height: 92px;
+        min-height: rem(92px);
     }
     &__main-inner {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-width: 946px;
-        max-height: 71px;
+        max-width: rem(946px);
+        max-height: rem(71px);
         margin: 0 auto;
         margin-top: rem(12px);
     }
@@ -86,16 +99,19 @@ body {
 
 .header__nav {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
-    line-height: 30px;
+    line-height: rem(30px);
     text-transform: uppercase;
     &-list {
         color: #fff;
     }
     &-item {
         display: inline-block;
-        margin-left: 15px;
+        margin-left: rem(15px);
+        @include tablets {
+            display: none;
+        }
         &:last-child {
             background-color: #e45028;
             border-radius: 6px;
@@ -108,7 +124,7 @@ body {
         &:after {
             content: "•";
             color: #fff;
-            padding-left: 21px;
+            padding-left: rem(21px);
         }
         &:nth-of-type(6):after {
             display: none;
@@ -117,7 +133,10 @@ body {
             display: none;
         }
         &:last-child {
-            padding: 3px 15px;
+            padding: rem(3px) rem(15px);
+            @include tablets {
+                display: inline-block;
+            }
         }
     }
     &-item-link {
@@ -138,12 +157,15 @@ body {
         display: flex;
         justify-content: center;
         padding-bottom: rem(36px);
+        @include tablets {
+            flex-direction: column;
+        }
     }
     &-block {
-        /* max-height: rem(200px); */
     }
     &-block-pic {
-        /*  max-width: rem(500px); */
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -161,10 +183,10 @@ body {
 
 .section-title {
     font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 72px;
+    font-size: rem(72px);
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
     margin-top: 0;
 }
 
@@ -172,15 +194,24 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding-top: rem(144px);
+    padding-top: 7rem;
+    @include laptop {
+        padding-top: 4rem;
+    }
+    @include tablets {
+        padding-top: 0;
+        text-align: center;
+    }
     &-2nd {
         color: #ffffff;
         font-family: 'Lifehack', sans-serif;
-        font-size: 60px;
+        font-size: rem(60px);
         font-weight: 700;
         text-transform: lowercase;
         display: flex;
-        max-width: 383px;
+        max-width: 384px;
+        @include tablets {
+        }
     }
 }
 
@@ -199,16 +230,16 @@ body {
 .nav {
     &__list {
         position: fixed;
-        top: 86px;
+        top: rem(86px);
         list-style: none;
-        right: 44px;
+        right: rem(44px);
     }
     &__item {
-        margin-bottom: 9px;
+        margin-bottom: rem(9px);
         &-link {
             background: url('../img/ellipse-2.png') center center no-repeat;
-            width: 14px;
-            height: 14px;
+            width: rem(14px);
+            height: rem(14px);
             display: block;
         }
         &--active {
@@ -286,13 +317,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.8;
     &-text {
-        padding: 25px 25px;
+        padding: rem(25px) rem(25px);
         font-size: 0.9rem;
     }
 }
 
 .we_best__block {
-    height: 650px;
+    height: rem(650px);
     background: url('../img/bg_white.png') center center no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -325,22 +356,22 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 28%;
-    max-width: 300px;
+    max-width: rem(300px);
     vertical-align: top;
-    margin: 0 20px;
+    margin: 0 rem(20px);
     overflow: hidden;
     &-heading {
         display: block;
         font-family: 'Lifehack', sans-serif;
-        font-size: 24px;
-        margin: 15px 0;
+        font-size: rem(24px);
+        margin: rem(15px) 0;
     }
     &-text {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #463030;
         font-family: 'Ubuntu';
         font-size: 0.875rem;
-        line-height: 26.2px;
+        line-height: rem(26.2px);
         @include phones {
             line-height: 1.2;
         }
@@ -349,7 +380,7 @@ body {
         overflow: hidden;
     }
     &-pic {
-        min-height: 130px;
+        min-height: rem(130px);
         &_meat {
             background: url('../img/icons/best/best_meat.svg') center center no-repeat;
         }
@@ -363,7 +394,7 @@ body {
 }
 
 .reviews {
-    height: 650px;
+    height: rem(650px);
     display: flex;
     overflow: hidden;
     &__list {
@@ -444,8 +475,8 @@ body {
         font-family: 'Ubuntu', sans-serif;
         font-size: 0.967rem;
         border: none;
-        border-radius: 5px;
-        padding: 8px 10px;
+        border-radius: rem(5px);
+        padding: rem(8px) rem(10px);
         text-transform: uppercase;
         color: #fff;
         background-color: #3a3939;
@@ -527,15 +558,15 @@ body {
     display: flex;
     height: 0;
     overflow: hidden;
-    margin-left: 22px;
-    margin-top: 13px;
+    margin-left: rem(22px);
+    margin-top: rem(13px);
     &-img {
-        width: 100px;
-        height: 100px;
+        width: rem(100px);
+        height: rem(100px);
         border-radius: 50%;
         overflow: hidden;
         flex-basis: 100%;
-        max-width: 100px;
+        max-width: rem(100px);
     }
     &-text {
         font-family: 'Ubuntu', sans-serif;
@@ -547,7 +578,7 @@ body {
             margin: 0;
         }
         &__contain {
-            margin-top: 10px;
+            margin-top: rem(10px);
         }
     }
 }
@@ -614,7 +645,7 @@ body {
     border-radius: 6px;
     background-color: #e45028;
     border: none;
-    padding: 7px 16px;
+    padding: rem(7px) rem(16px);
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
@@ -671,7 +702,7 @@ body {
 
 .form__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
     &:last-child {
         margin-right: 0;
     }
@@ -681,7 +712,7 @@ body {
     width: 100%;
     border: none;
     border-radius: 5px;
-    padding: 8px 20px;
+    padding: rem(8px) rem(20px);
     margin-bottom: rem(15px);
     margin-top: rem(5px);
 }
@@ -689,7 +720,7 @@ body {
 .form__textarea {
     @extend .form__input;
     resize: none;
-    height: 90px;
+    height: rem(90px);
 }
 
 .form__title {
@@ -730,27 +761,27 @@ body {
 
 .radio__buttons--style {
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     border: 1px solid #fff;
     background-color: #fff;
     border-radius: 50%;
     margin: 0;
     float: left;
-    margin-right: 5px;
-    margin-top: -2px;
+    margin-right: rem(5px);
+    margin-top: rem(-2px);
     vertical-align: middle;
     &::before {
         content: "";
         position: absolute;
-        top: 4px;
-        left: 4px;
-        right: 6px;
-        bottom: 6px;
+        top: rem(4px);
+        left: rem(4px);
+        right: rem(6px);
+        bottom: rem(6px);
         background: #ec1e79;
         border-radius: 50%;
-        width: 8px;
-        height: 8px;
+        width: rem(8px);
+        height: rem(8px);
         transform: scale(0);
         transition: .4s;
     }
@@ -772,15 +803,15 @@ body {
     }
     &--style {
         position: relative;
-        width: 18px;
-        height: 18px;
+        width: rem(18px);
+        height: rem(18px);
         border: 1px solid #fff;
         background-color: #fff;
         border-radius: 2px;
         margin: 0;
         float: left;
-        margin-right: 5px;
-        margin-top: -2px;
+        margin-right: rem(5px);
+        margin-top: rem(-2px);
         vertical-align: middle;
         &::before {
             content: "";
@@ -788,8 +819,8 @@ body {
             background: url('../img/icons/checkmark.png') center center no-repeat;
             top: 0;
             left: 0;
-            width: 16px;
-            height: 16px;
+            width: rem(16px);
+            height: rem(16px);
             transform: scale(0);
             transition: .4s;
         }
@@ -844,7 +875,7 @@ body {
 }
 
 .footer {
-    height: 60px;
+    height: rem(60px);
     width: 100%;
     background: url('../img/bg__footer.png') center center no-repeat;
     background-size: cover;
@@ -857,20 +888,20 @@ body {
 
 .footer__left {
     width: 50%;
-    height: 56px;
+    height: rem(56px);
     display: flex;
     flex-direction: column;
     &-top {
-        padding-top: 5px;
+        padding-top: rem(5px);
     }
     &-bottom {
         display: flex;
-        padding-top: 7px;
+        padding-top: rem(7px);
     }
     &-img {
         background: url('../img/icons/phone.svg') center center no-repeat;
-        width: 16px;
-        height: 16px;
+        width: rem(16px);
+        height: rem(16px);
     }
     &-number {
         color: red;
@@ -886,7 +917,7 @@ body {
 }
 
 .footer__container {
-    max-width: 1100px;
+    max-width: rem(1100px);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -895,10 +926,10 @@ body {
 .icon {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 17px;
+    margin-left: rem(17px);
     fill: #595959;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     transition: .4s;
 }
 
