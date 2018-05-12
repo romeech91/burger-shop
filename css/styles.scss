@@ -216,6 +216,9 @@ body {
         @include tablets {
             max-width: none;
         }
+        @include phones {
+            font-size: 3.5rem;
+        }
     }
 }
 
