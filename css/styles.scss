@@ -204,7 +204,7 @@ body {
     flex-direction: column;
     padding-top: 8rem;
     @include laptop {
-        padding-top: 4rem;
+        padding-top: 9rem;
     }
     @include tablets {
         padding-top: 0;
@@ -263,6 +263,66 @@ body {
     }
 }
 
+.menu__popup {
+    position: fixed;
+    width: 100%;
+    max-height: 650px;
+    display: none;
+    @include tablets {
+        display: none;
+    }
+    &-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    &-logo {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        width: 100%;
+         background-color: rgba(47, 50, 52, 0.99);
+    }
+    &-close {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+    }
+    &-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-item {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 2rem;
+        position: relative;
+        &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 143%;
+            left: 50%;
+        }
+    }
+}
+.menu__popup-item:last-child::after {
+    display: none;
+}
 .section-title__menu {
     position: absolute;
     top: 5%;
@@ -767,6 +827,7 @@ body {
     margin-right: rem(8px);
 }
 
+
 .left-form {
     max-width: rem(500px);
     width: 50%;
@@ -875,7 +936,6 @@ body {
     transform: scale(1);
 }
 
-.checked__title {}
 
 .form__buttons {
     display: flex;
@@ -991,7 +1051,14 @@ body {
     position: fixed;
     top: 3%;
     right: 5%;
+    display: none;
     cursor: pointer;
+    @include laptop {
+        display: none;
+    }
+    @include tablets {
+        display: block;
+    }
     @include phones {
         top: 2.8%;
     }
