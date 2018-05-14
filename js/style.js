@@ -26,3 +26,4 @@ closeBtn.addEventListener('click', function() {
     popup.style.display = 'none';
     wrapper.style.overflow = 'none';
 });
+

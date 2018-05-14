@@ -18,3 +18,9 @@
         @content;
     }
 }
+
+@mixin phonesOld {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
