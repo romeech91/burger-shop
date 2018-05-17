@@ -263,12 +263,19 @@ body {
     }
 }
 
+.menu__popup--active {
+    display: flex;
+    opacity: 0;
+}
+
 .menu__popup {
     position: fixed;
     z-index: 800;
     width: 100%;
     max-height: 650px;
     display: none;
+    opacity: 1;
+    transition: opacity .4s;
     @include tablets {
         display: none;
     }
@@ -291,7 +298,7 @@ body {
          background-color: rgba(47, 50, 52, 0.99);
     }
     &-close {
-        display: block;
+        display: flex;
         position: absolute;
         top: 5%;
         right: 5%;

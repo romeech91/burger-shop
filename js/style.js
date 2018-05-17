@@ -12,18 +12,21 @@ phoneNumber.addEventListener('keydown', function(event) {
 
 ///////////POPUP__MENU__THERE
 
+
 const openBtn = document.querySelector('.hambg__menu');
 const closeBtn = document.querySelector('.menu__popup-close');
-const popup = document.querySelector('.menu__popup');
+const popup = $('.menu__popup');
 const wrapper = document.querySelector('.wrapper');
 
 openBtn.addEventListener('click', function() {
-    popup.style.display = 'flex';
+    popup.fadeIn();
+    popup.addClass('menu__popup--active');
     wrapper.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', function() {
-    popup.style.display = 'none';
+    popup.fadeOut();
+    popup.removeClass('menu__popup--active');
     wrapper.style.overflow = 'none';
 });
 
