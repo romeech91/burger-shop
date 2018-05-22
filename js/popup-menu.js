@@ -15,18 +15,23 @@ phoneNumber.addEventListener('keydown', function(event) {
 
 const openBtn = document.querySelector('.hambg__menu');
 const closeBtn = document.querySelector('.menu__popup-close');
-const popup = $('.menu__popup');
+const popup = document.querySelector('.menu__popup');
+const listItem = document.querySelectorAll('.menu__popup-item');
 const wrapper = document.querySelector('.wrapper');
 
-openBtn.addEventListener('click', function() {
-    popup.fadeIn();
-    popup.addClass('menu__popup--active');
-    wrapper.style.overflow = 'hidden';
+openBtn.addEventListener('click', () => {
+    popup.style.top = '0';
 });
 
-closeBtn.addEventListener('click', function() {
-    popup.fadeOut();
-    popup.removeClass('menu__popup--active');
-    wrapper.style.overflow = 'none';
+closeBtn.addEventListener('click', () => {
+    popup.style.top = '-9999px';
 });
+
+for (var i = 0; i < listItem.length; i++) {
+    var element = listItem[i];
+    element.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.style.top = '-9999px';
+    })
+};
 

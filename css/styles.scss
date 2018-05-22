@@ -263,22 +263,16 @@ body {
     }
 }
 
-.menu__popup--active {
-    display: flex;
-    opacity: 0;
-}
 
 .menu__popup {
     position: fixed;
     z-index: 800;
+    top: -9999px;
+    height: 100%;
     width: 100%;
     max-height: 650px;
-    display: none;
-    opacity: 1;
-    transition: opacity .4s;
-    @include tablets {
-        display: none;
-    }
+    display: flex;
+    transition: top .5s;
     &-link {
         color: #fff;
         text-decoration: none;
@@ -506,6 +500,7 @@ body {
 }
 
 .reviews {
+    position: relative;
     height: rem(650px);
     display: flex;
     overflow: hidden;
@@ -605,6 +600,49 @@ body {
             background-color: #1f1e1e;
         }
     }
+}
+
+.reviews__overlay-container {
+    position: relative;
+}
+
+.reviews__overlay-close {
+    font: 16px Helvetica, sans-serif;
+    color: #fff;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    background: #d00;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reviews__overlay-content {
+    width: 400px;
+    background: #444;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    font: 16px Helvetica, sans-serif;
+    margin: 0;
+}
+
+.reviews__overlay {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    height: 100%;
 }
 
 .team {
@@ -1275,6 +1313,6 @@ body {
     width: rem(32px);
     height: rem(4px);
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #ce401a;
     margin: 5px;
 }
