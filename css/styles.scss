@@ -166,8 +166,7 @@ body {
             flex-direction: column;
         }
     }
-    &-block {
-    }
+    
     &-block-pic {
         max-width: 100%;
         max-height: 100%;
@@ -365,6 +364,9 @@ body {
         align-items: center;
         cursor: pointer;
         float: left;
+        @include phones {
+            width: 3rem;
+        }
         &:hover {
             .acco__item__block-txt {
                 color: $yellow;
@@ -380,12 +382,30 @@ body {
             transform: rotate(-90deg);
             color: #fff;
             transition: .3s;
+            @include phones {
+                font-size: 1.75rem;
+            }
         }
+    }
+}
+
+.acco__item--active {
+    .acco__item__content {
+        width: rem(400px);
+        transition: width .4s;
+        
+    }
+    .acco__item__block-txt {
+        color: $yellow;
+    }
+    @include phones {
+        width: 12rem;
     }
 }
 
 .acco__item__content {
     width: 0; //400px
+    
     height: 100%;
     color: #fff;
     background: rgba(47, 50, 52, .93);
