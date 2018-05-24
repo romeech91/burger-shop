@@ -267,16 +267,19 @@ body {
 .menu__popup {
     position: fixed;
     z-index: 800;
-    top: -9999px;
+    top: -2999px;
     height: 100%;
     width: 100%;
     max-height: 650px;
     display: flex;
-    transition: top .5s;
+    transition: top .5s ease;
     &-link {
         color: #fff;
         text-decoration: none;
         text-shadow: 0 0 15px;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &-logo {
         position: absolute;
@@ -306,8 +309,9 @@ body {
         padding-left: 0;
     }
     &-item {
-        font-size: 1.5rem;
-        font-weight: 400;
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'Gagalin', sans-serif;
         text-transform: uppercase;
         color: #fff;
         margin-bottom: 2rem;
@@ -316,7 +320,7 @@ body {
             content: "";
             width: 8px;
             height: 8px;
-            background-color: #fff;
+            background-color: lightcoral;
             border-radius: 50%;
             position: absolute;
             top: 143%;
@@ -344,14 +348,6 @@ body {
     margin: 0;
 }
 
-.acco__item--active {
-    .acco__item__content {
-        /* width: rem(500px); */
-    }
-    .acco__item__block-txt {
-        /* color: $yellow; */
-    }
-}
 
 .acco__item {
     list-style: none;
@@ -389,7 +385,7 @@ body {
 }
 
 .acco__item__content {
-    width: 0;
+    width: 0; //400px
     height: 100%;
     color: #fff;
     background: rgba(47, 50, 52, .93);
@@ -622,13 +618,16 @@ body {
 }
 
 .reviews__overlay-content {
-    width: 400px;
-    background: #444;
+    width: rem(400px);
+    background: #fff;
     border-radius: 5px;
     padding: 10px;
-    color: #fff;
+    color: #2f3234;
     font: 16px Helvetica, sans-serif;
     margin: 0;
+    @include phonesOld {
+        width: rem(280px);
+    }
 }
 
 .reviews__overlay {
@@ -768,6 +767,7 @@ body {
         border-right: 5px solid transparent;
         border-top: 7px solid $yellow;
         margin-right: 0.8rem;
+        transition: .4s;
     }
 }
 
@@ -944,6 +944,9 @@ body {
     display: flex;
     align-items: center;
     padding: 0 10px;
+    @include phonesOld {
+        padding: 0;
+    }
 }
 
 .slider__price {

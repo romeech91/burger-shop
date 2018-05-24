@@ -1,5 +1,5 @@
 const openBTN = document.querySelectorAll('.reviews__content-btn');
-const succesOverlay = createOverlay("Текст комментария");
+const succesOverlay = createOverlay("Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.");
 const reviewsBlock = document.querySelector('.reviews');
 
 for (var i = 0; i < openBTN.length; i++) {

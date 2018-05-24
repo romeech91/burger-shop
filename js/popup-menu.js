@@ -21,10 +21,12 @@ const wrapper = document.querySelector('.wrapper');
 
 openBtn.addEventListener('click', () => {
     popup.style.top = '0';
+    wrapper.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', () => {
     popup.style.top = '-9999px';
+    wrapper.style.overflow = 'none';
 });
 
 for (var i = 0; i < listItem.length; i++) {
