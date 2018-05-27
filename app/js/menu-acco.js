@@ -3,8 +3,9 @@
 
 const listItems = document.querySelector('.acco__list');
 const Items = document.querySelectorAll('.acco__item');
+const menuSec = document.querySelector('.menu');
 
-listItems.addEventListener('click', (e) => {
+menuSec.addEventListener('click', (e) => {
     e.preventDefault();
     let target = e.target;
 
@@ -18,7 +19,7 @@ listItems.addEventListener('click', (e) => {
             });
             item.classList.add('acco__item--active');
         }
-    };
+    }
 
 });
 
