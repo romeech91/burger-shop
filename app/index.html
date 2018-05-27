@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<main class="wrapper">
+	<div class="wrapper">
 	  <div class="maincont">
 		<section class="main__block section">
 			<div class="container main-sec__container">
@@ -29,25 +29,25 @@
 							<nav class="header__nav">
 								<ul class="header__nav-list">
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">О нас</a>
+										<a href="#about_us" class="header__nav-item-link">О нас</a>
 									</li>
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">Бургеры</a>
+										<a href="#burgers_slider" class="header__nav-item-link">Бургеры</a>
 									</li>
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">Команда</a>
+										<a href="#our_team" class="header__nav-item-link">Команда</a>
 									</li>
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">Меню</a>
+										<a href="#menu_types" class="header__nav-item-link">Меню</a>
 									</li>
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">Отзывы</a>
+										<a href="#reviews" class="header__nav-item-link">Отзывы</a>
 									</li>
 									<li class="header__nav-item">
-										<a href="#" class="header__nav-item-link">Контакты</a>
+										<a href="#on_map" class="header__nav-item-link">На карте</a>
 									</li>
 									<li class="header__nav-item nav-item--button">
-										<a href="#" class="header__nav-item-link">Заказать</a>
+										<a href="#order" class="header__nav-item-link">Заказать</a>
 									</li>
 								</ul>
 							</nav>
@@ -92,29 +92,29 @@
 					<img class="menu__popup-close" src="./img/icons/close__button.svg" alt="кнопка закрытия меню">
 					<ul class="menu__popup-list">
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">О нас</a>
+							<a class="menu__popup-link" href="#about_us">О нас</a>
 						</li>
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">Бургеры</a>
+							<a class="menu__popup-link" href="#burgers_slider">Бургеры</a>
 						</li>
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">Команда</a>
+							<a class="menu__popup-link" href="#our_team">Команда</a>
 						</li>
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">Меню</a>
+							<a class="menu__popup-link" href="#menu_types">Меню</a>
 						</li>
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">Отзывы</a>
+							<a class="menu__popup-link" href="#reviews">Отзывы</a>
 						</li>
 						<li class="menu__popup-item">
-							<a class="menu__popup-link" href="#">Контакты</a>
+							<a class="menu__popup-link" href="#on_map">На карте</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="we_best__block section">
+		<section class="we_best__block section" id="about_us">
 			<div class="container we_best__container">
 				<div class="we_best__block__heading">
 					<h2 class="section-title title-dark title-best">Мы лучшие</h2>
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section burger">
+		<section class="section burger" id="burgers_slider">
 			<div class="container burger-container">
 				<main class="burger-slider">
 
@@ -422,7 +422,7 @@
 			</div>
 		</section>
 
-		<section class="team section">
+		<section class="team section" id='our_team'>
 			<div class="team-container">
 				<div class="team__block">
 
@@ -488,7 +488,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="menu section">
+		<section class="menu section" id="menu_types">
 			<h2 class="section-title section-title__menu title-white">Меню</h2>
 			<div class="container-menu">
 				<ul class="acco__list">
@@ -535,7 +535,7 @@
 
 			</div>
 		</section>
-		<section class="reviews section">
+		<section class="reviews section" id="reviews"> 
 
 			<ul class="reviews__list">
 				<li class="reviews__item">
@@ -645,7 +645,7 @@
 			</ul>
 
 		</section>
-		<section class="order section">
+		<section class="order section" id="order">
 			<div class="container form__container">
 				<h2 class="section-title title-yellow order__head">Закажите доставку</h2>
 				<form class="form">
@@ -718,7 +718,7 @@
 				</form>
 			</div>
 		</section>
-		<section class="map section">
+		<section class="map section" id="on_map">
 			<div class="map__block" id="map" style="width: 100%">
 
 			</div>
@@ -820,7 +820,7 @@
 			</nav>
 		</aside>
       </div>
-	</main>
+	</div>
 
 
 	<script type="reviews__template" id="overlayReviews">
@@ -831,49 +831,8 @@
 	</script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
 	</script>
-	<script type="text/javascript">
-		ymaps.ready(init);
-		var myMap;
-		var myPlacemark1, myPlacemark2, myPlacemark3;
 
-		function init() {
-			myMap = new ymaps.Map("map", {
-				center: [59.93337799, 30.34010308],
-				zoom: 12
-			});
-			myPlacemark1 = new ymaps.Placemark([59.93402348, 30.33998880], {
-				hintContent: 'Mr.Burger',
-				balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
-			}, {
-				iconLayout: 'default#image',
-				iconImageHref: './img/icons/map-marker.svg',
-				iconImageSize: [46, 58],
-				iconImageOffset: [-3, -42]
-			});
-			myPlacemark2 = new ymaps.Placemark([59.96180304, 30.40697009], {
-				hintContent: 'Mr.Burger',
-				balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
-			}, {
-				iconLayout: 'default#image',
-				iconImageHref: './img/icons/map-marker.svg',
-				iconImageSize: [46, 58],
-				iconImageOffset: [-3, -42]
-			});
-			myPlacemark3 = new ymaps.Placemark([59.95471786, 30.32426274], {
-				hintContent: 'Mr.Burger',
-				balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
-			}, {
-				iconLayout: 'default#image',
-				iconImageHref: './img/icons/map-marker.svg',
-				iconImageSize: [46, 58],
-				iconImageOffset: [-3, -42]
-			});
-
-			myMap.geoObjects.add(myPlacemark1);
-			myMap.geoObjects.add(myPlacemark2);
-			myMap.geoObjects.add(myPlacemark3);
-		}
-	</script>
+	<script src="./js/maps-settings.js"></script>
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="./js/popup-menu.js"></script>
 	<script src="./js/reviews-modal.js"></script>

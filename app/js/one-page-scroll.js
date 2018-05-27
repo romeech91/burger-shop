@@ -1,28 +1,23 @@
-$(document).ready(function() {
+const sections = $('.section');
+const display = $('.maincont');
 
-    let screen = 0,
-        container = $('.maincont'),
-        sections = $('.section'),
-        inscroll = false;
+const performTransition = sectionEq => {
+    const position = `$(-sectionEq * 100)%`;
 
-    $('body').on('mousewheel', function(event) {
-        if (!inscroll) {
-            inscroll = true;
-           if(event.deltaY > 0) {
-            screen--;
-            } else {
-                screen++;
-            } 
-        }
-
-        
-        var position = (-screen * 100) + '%';
-
-        container.css('top', position);
-
-        setTimeout(function() {
-            inscroll = false;
-        }, 1300);
+    display.css({
+        transform: `translateY(${position})`,
+        '-web-kit-transform': `translateY(${position})`
     });
-});
+}
 
+$(document).on('wheel', e => {
+    const deltaY = e.originalEvent.deltaY;
+
+    if(deltaY > 0) {
+        performTransition(2);
+    } 
+
+    if(deltaY < 0) {
+        console.log('up!');
+    }
+});

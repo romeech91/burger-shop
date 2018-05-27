@@ -1,4 +1,6 @@
-/* const phoneNumber = document.querySelector("#form__input-phone");
+///Words blocker for order form
+
+const phoneNumber = document.querySelector("#form__input-phone");
 
 phoneNumber.addEventListener('keydown', function(event) {
     let isTrueKeys = false;
@@ -8,7 +10,7 @@ phoneNumber.addEventListener('keydown', function(event) {
     if (!isTrueKeys) {
         event.preventDefault();
     }
-}); */
+}); 
 
 ///////////POPUP__MENU__THERE
 
@@ -21,12 +23,12 @@ const wrapper = document.querySelector('.wrapper');
 
 openBtn.addEventListener('click', () => {
     popup.style.top = '0';
-    wrapper.style.overflow = 'hidden';
+    /* wrapper.style.overflow = 'hidden'; */
 });
 
 closeBtn.addEventListener('click', () => {
     popup.style.top = '-9999px';
-    wrapper.style.overflow = 'none';
+    /* wrapper.style.overflow = 'none'; */
 });
 
 for (var i = 0; i < listItem.length; i++) {
