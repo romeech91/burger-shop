@@ -35,22 +35,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
+    overflow: hidden;
 }
 
+/* .wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+ */
 .maincont {
     width: 100%;
     height: 100%;
     min-height: 600px;
     position: relative;
     transition: 1s;
+    will-change: transform;
 }
 
-.wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-}
 
 .main__block {
     min-height: 650px;
