@@ -22,6 +22,8 @@ h4 {
 * {
     box-sizing: border-box;
 }
+$primaryColor: #4A90E2;
+$secondColor:#0087AC;
 
 
 $orange: #e25028;
@@ -29,6 +31,8 @@ $yellow: #f8b43a;
 $green: #8ac04e;
 $dark: #2f3234;
 $white: #ffffff;
+
+
 
 body {
     -webkit-font-smoothing: antialiased;
@@ -163,10 +167,10 @@ body {
     &-item-link {
         text-decoration: none;
         color: #fff;
-        &:hover {
+        /* &:hover {
             text-shadow: 2px 3px 60px rgba(255,255,255,.75);
             transition: text-shadow .2s ease;
-        }
+        } */
     }
 }
 
@@ -210,6 +214,9 @@ body {
     text-transform: uppercase;
     margin-bottom: rem(30px);
     margin-top: 0;
+    @include phonesOld {
+        font-size: 3.5rem;
+    }
 }
 
 .main__burger-text {
@@ -306,7 +313,7 @@ body {
         justify-content: center;
         width: 100%;
         height: 100vh;
-        background-color: rgba(47, 50, 52, 0.99);
+        background-color: rgba(47, 50, 52, 0.87);
     }
     &-close {
         display: flex;
@@ -643,8 +650,8 @@ body {
     font: 16px Helvetica, sans-serif;
     color: #fff;
     position: absolute;
-    right: -5px;
-    top: -10px;
+    right: 2px;
+    top: 2px;
     background: #d00;
     border-radius: 50%;
     width: 20px;
@@ -1767,6 +1774,7 @@ body {
     }
     @include tablets {
         display: block;
+        top: 2.2%;
     }
     @include phones {
         top: 2.8%;
