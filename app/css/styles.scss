@@ -304,8 +304,8 @@ body {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        width: 100%;
-         background-color: rgba(47, 50, 52, 0.99);
+        height: 100vh;
+        background-color: rgba(47, 50, 52, 0.99);
     }
     &-close {
         display: flex;
