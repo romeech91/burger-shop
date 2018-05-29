@@ -35,13 +35,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
-    overflow: hidden;
 }
 
 .wrapper {
     position: relative;
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
+   
 }
 
 .maincont {
@@ -1626,10 +1626,10 @@ body {
     }
 }
 
-/* .map__block {
-    background-color: red;
+.map {
+    overflow: hidden;
+    position: relative;
 }
- */
 
 .footer {
     height: rem(60px);
