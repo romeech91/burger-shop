@@ -19,6 +19,20 @@
     }
 }
 
+@mixin iphone6 {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin iphone6notplus {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+
+
 @mixin phonesOld {
     @media (max-width: 320px) {
         @content;

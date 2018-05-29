@@ -41,7 +41,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-   
+    overflow: hidden;
 }
 
 .maincont {
@@ -51,6 +51,7 @@ body {
     position: relative;
     transition: 1s;
     will-change: transform;
+    
 }
 
 
@@ -678,6 +679,7 @@ body {
     align-items: center;
     z-index: 10000;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
 }
 
 .team {
@@ -1046,12 +1048,20 @@ body {
     margin: 0 rem(10px);
     overflow: hidden;
     @include tablets {
-        height: 70%;
+        height: 56%;
         align-content: center;
         justify-content: center;
+
     }
     @include phones {
         height: 100%;
+    }
+
+    @include iphone6 {
+        height: 77%;
+    }
+    @include phonesOld {
+        height: 87%;
     }
 }
 
@@ -1141,20 +1151,30 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    padding-left: 0;
 }
 
 .burger__carousel {
     position: relative;
     right: 0;
-    width: rem(940px);
+    width: 59.75rem;
     height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     @include tablets {
-        height: 70%;
+        width: 54rem;
         flex-direction: column;
+    }
+    @include iphone6 {
+        width: 30.6rem;
+    }
+    @include iphone6notplus {
+        width: 27.6rem;
+    }
+    @include phonesOld {
+        width: 23.6rem;
     }
 }
 
@@ -1162,41 +1182,45 @@ body {
     position: relative;
     max-width: 50%;
     height: 100%;
-    @include tablets {
-        height: 50%;
-        max-width: 100%;
-        align-items: center;
-        text-align: center;
-        margin-right: 0;
+    
+}
+
+.burger__big-pic {
+    @include laptop {
+        
     }
 }
 
 .burger__main__right-side {
     height: 100%;
     width: 50%;
-    @include tablets {
-        width: 100%;
+    @include laptop {
+        width: 42rem;
         text-align: center;
     }
+    @include phones {
+        width: 24rem;
+    }
+    
 }
 
 .burger__main__left-side__img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    @include tablets {
-        width: 100%;
-        height: 100%;
-    }
+    
 }
 
 .section_title_burger {
     color: $white;
     line-height: 1em;
-    width: 80%;
+    
     text-align: center;
     @include tablets {
         margin: 0 auto;
+    }
+    @include iphone6 {
+        font-size: 3.5rem;
     }
 }
 
@@ -1215,6 +1239,9 @@ body {
     padding-right: rem(25px);
     font-size: 1rem;
     color: #fff;
+    @include iphone6 {
+        font-size: 1.2rem;
+    }
 }
 
 .section_title_burger_price {
@@ -1265,11 +1292,17 @@ body {
         cursor: pointer;
         background-color: darken($orange, 3%);
     }
+    @include tablets {
+        left: 100px;
+    }
     @include phones {
         top: 10%;
         width: 4.625rem;
         height: 4.625rem;
         padding: rem(8px) rem(13px);
+    }
+    @include iphone6 {
+        left: 0;
     }
 }
 
@@ -1365,14 +1398,17 @@ body {
     text-align: center;
     z-index: 1;
     @include tablets {
-        top: 0;
+        top: 10px;
         left: initial;
-        right: 0;
+        right: 114px;
         bottom: 0;
     }
     @include phones {
         top: 9.5%;
         padding: 3px 13px;
+    }
+    @include iphone6 {
+        right: 0;
     }
     &::before {
         display: block;
@@ -1387,6 +1423,10 @@ body {
         bottom: 0;
         @include phones {
             font-size: 12px;
+        }
+        @include phonesOld {
+            font-size: 11px;
+            top: 53%;
         }
     }
 }
