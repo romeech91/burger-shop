@@ -456,7 +456,7 @@ body {
 
 .title-best {
     @include phones {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
     }
 }
 
@@ -522,7 +522,7 @@ body {
     &-pic {
         min-height: 6rem;
         @include phones {
-            min-height: 5.1rem;
+            min-height: 4.1rem;
         }
         &_meat {
             background: url('../img/icons/best/best_meat.svg') center center no-repeat;
