@@ -82,3 +82,19 @@ $('[data-scroll-to]').on('click', (e) => {
   performTransition(target);
   
 })
+
+if (isMobile) {
+  $(document).swipe({
+    swipe: function (
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+      const swipeDirection = direction === 'down' ? 'up' : 'down';
+      scrollToSection(swipeDirection);
+    }
+  });
+};
