@@ -1,0 +1,36 @@
+.hambg__menu {
+    z-index: 100;
+    position: fixed;
+    top: 3%;
+    right: 5%;
+    display: none;
+    cursor: pointer;
+    @include laptop {
+        display: none;
+    }
+    @include tablets {
+        display: block;
+        top: 2.2%;
+    }
+    @include phones {
+        top: 2.8%;
+    }
+    @include phonesOld {
+        top: 3.5%;
+        right: 3%;
+    }
+}
+
+.hambg__icon {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+.hambg__line {
+    width: rem(32px);
+    height: rem(4px);
+    border-radius: 4px;
+    background-color: #ce401a;
+    margin: 5px;
+}

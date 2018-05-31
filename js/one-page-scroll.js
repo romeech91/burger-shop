@@ -3,6 +3,7 @@ const sections = $('.section');
 const display = $('.maincont');
 let inScroll = false;
 
+
 const setActiveMenuItem = itemEq => {
   $('.nav__item')
   .eq(itemEq)
@@ -83,7 +84,7 @@ $('[data-scroll-to]').on('click', (e) => {
   
 })
 
-if (isMobile) {
+/* if (isMobile) {
   $(document).swipe({
     swipe: function (
       event,
@@ -97,4 +98,4 @@ if (isMobile) {
       scrollToSection(swipeDirection);
     }
   });
-};
+}; */

@@ -1,0 +1,150 @@
+
+.reviews {
+    position: relative;
+    height: rem(650px);
+    display: flex;
+    overflow: hidden;
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    &__item {
+        position: relative;
+        list-style: none;
+        height: 50%;
+        flex-basis: 25%;
+        @include laptop {
+            flex-basis: 25%;
+        }
+        @include tablets {
+            flex-basis: 50%;
+            height: 25%;
+        }
+        @include phones {
+            flex-basis: 50%;
+        }
+        &__inner {
+            width: 100%;
+            height: 100%;
+            &-pic {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
+.reviews__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: #fff;
+    opacity: 0;
+    padding: 1.2rem;
+    line-height: rem(27px);
+    font-size: 1rem;
+    transition: .47s ease;
+    overflow: hidden;
+    text-align: center;
+    @include laptop {
+        line-height: 1.3rem;
+    }
+    @include tablets {
+        line-height: 1.1rem;
+    }
+    @include phones {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &-name {
+        font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+    }
+    &-text {
+        font-family: 'Ubuntu', sans-serif;
+        @include phones {
+            display: none;
+        }
+    }
+    &-btn {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 0.967rem;
+        border: none;
+        border-radius: rem(5px);
+        padding: rem(8px) rem(10px);
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #3a3939;
+        cursor: pointer;
+        font-weight: 500;
+        transition: .3s;
+        @include phones {
+            margin-top: 0.65rem;
+        }
+        &:hover {
+            background-color: #1f1e1e;
+        }
+    }
+}
+
+.reviews__overlay {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.reviews__overlay-container {
+    position: relative;
+}
+
+.reviews__overlay-close {
+    font: 16px Helvetica, sans-serif;
+    color: red;
+    font-weight: 700;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reviews__overlay-content {
+    width: rem(400px);
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    color: #2f3234;
+    font: 16px Helvetica, sans-serif;
+    margin: 0;
+    @include phonesOld {
+        width: rem(280px);
+    }
+}

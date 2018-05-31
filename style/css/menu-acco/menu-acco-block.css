@@ -1,0 +1,16 @@
+.menu {
+  background: url("../img/bg__menu.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.menu__block-heading {
+  color: #fff;
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 4rem; }
+
+.container-menu {
+  width: 100%; }

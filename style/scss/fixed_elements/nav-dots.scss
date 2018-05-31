@@ -1,0 +1,25 @@
+.nav {
+    &__list {
+        position: fixed;
+        top: rem(86px);
+        list-style: none;
+        right: rem(44px);
+        @include tablets {
+            display: none;
+        }
+    }
+    &__item {
+        margin-bottom: rem(9px);
+        &-link {
+            background: url('../img/ellipse-2.png') center center no-repeat;
+            width: 14px;
+            height: 14px;
+            display: block;
+        }
+        &--active {
+            border: 1px solid #c9816d;
+            border-radius: 50%;
+        }
+    }
+}
+

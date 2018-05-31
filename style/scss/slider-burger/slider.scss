@@ -1,0 +1,408 @@
+
+
+.burger {
+    background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+}
+
+// Carousel
+.burger-container {
+    align-items: center;
+    width: rem(973px);
+}
+
+.burger-slider {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 rem(10px);
+    overflow: hidden;
+    @include tablets {
+        height: 56%;
+        align-content: center;
+        justify-content: center;
+
+    }
+    @include phones {
+        height: 100%;
+    }
+
+    @include iphone6 {
+        height: 77%;
+    }
+    @include phonesOld {
+        height: 87%;
+    }
+}
+
+.slider__btn {
+    position: absolute;
+    text-decoration: none;
+    font-size: 72px;
+    color: $white;
+    font-weight: lighter;
+    cursor: pointer;
+    top: 50%;
+    z-index: 20;
+    transform: translate(-50%);
+    transition: .3s;
+    &:hover {
+        color: $orange;
+    }
+}
+
+
+.slider__text {
+    &-btn {
+        @include tablets {
+            font-size: 0.9rem;
+            height: rem(32px);
+        }
+        border: none;
+        width: rem(101px);
+        border-radius: rem(7px);
+        height: rem(40px);
+        text-transform: uppercase;
+        background: #e45028;
+        color: #fff;
+        margin-left: rem(30px);
+        cursor: pointer;
+        transition: .4s;
+        margin-bottom: rem(17px);
+        &:hover {
+            background: darken(#e45028, 15%);
+        }
+    }
+}
+
+.slider_btn_prev {
+    left: rem(10px);
+    @include phones {
+        left: rem(14px);
+    }
+}
+
+.slider_btn_next {
+    right: -13px;
+    @include phones {
+        right: rem(-4px);
+    }
+}
+
+.bottom__dots {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+}
+
+.bottom__dots-list {
+    display: flex;
+}
+
+.bottom__dots-item {
+    width: rem(10px);
+    height: rem(10px);
+    border-radius: 50%;
+    margin-right: rem(10px);
+    background-color: $orange;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($orange, 15%);
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.burger__carousel-list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+}
+
+.burger__carousel {
+    position: relative;
+    right: 0;
+    width: 59.75rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    @include tablets {
+        width: 54rem;
+        flex-direction: column;
+    }
+    @include iphone6 {
+        width: 30.6rem;
+    }
+    @include iphone6notplus {
+        width: 27.6rem;
+    }
+    @include phonesOld {
+        width: 23.6rem;
+    }
+}
+
+.burger__main__left-side {
+    position: relative;
+    max-width: 50%;
+    height: 100%;
+    
+}
+
+.burger__big-pic {
+    @include laptop {
+        
+    }
+}
+
+.burger__main__right-side {
+    height: 100%;
+    width: 50%;
+    @include laptop {
+        width: 42rem;
+        text-align: center;
+    }
+    @include phones {
+        width: 24rem;
+    }
+    
+}
+
+.burger__main__left-side__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.section_title_burger {
+    color: $white;
+    line-height: 1em;
+    text-shadow: 2px 2px 2px rgba(20, 10, 10, 0.87);
+    text-align: center;
+    @include tablets {
+        margin: 0 auto;
+    }
+    @include iphone6 {
+        font-size: 3.5rem;
+    }
+}
+
+.burger__main__left-side__block-img {
+    width: 100%;
+    height: 100%;
+    @include tablets {
+        text-align: center;
+    }
+    @include phones {
+        padding-top: rem(50px);
+    }
+}
+
+.burger__main__right-side__description {
+    padding-right: rem(25px);
+    font-size: 1rem;
+    color: #fff;
+    @include iphone6 {
+        font-size: 1.2rem;
+    }
+}
+
+.section_title_burger_price {
+    font-family: 'Gagalin', sans-serif;
+    font-size: 3rem;
+    color: #e35028;
+    &::after {
+        content: "рублей";
+        display: inline-block;
+        font-size: rem(30px);
+        margin-left: rem(3px);
+        @include tablets {
+            font-size: rem(22px);
+            margin-right: rem(20px);
+        }
+    }
+}
+
+.btn_link_burger {
+    margin-left: rem(25px);
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+// End Carousel
+// block ingridients
+.ingridients {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.block__float-ingridients {
+    color: #fff;
+    position: relative;
+    background: rgba(227, 80, 40, 0.4);
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 0.3125rem;
+    padding: rem(13px) rem(23px);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($orange, 3%);
+    }
+    @include tablets {
+        left: 100px;
+    }
+    @include phones {
+        top: 10%;
+        width: 4.625rem;
+        height: 4.625rem;
+        padding: rem(8px) rem(13px);
+    }
+    @include iphone6 {
+        left: 0;
+    }
+}
+
+.float-ingridients__list {
+    list-style: none;
+    opacity: 0;
+    transition: opacity .4s ease-in;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -9999px;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background: #fff;
+    border-radius: 0.3125rem;
+    width: 14rem;
+    height: rem(350px);
+    padding: rem(10px) rem(5px) 0 rem(20px);
+    color: #000;
+    overflow: hidden;
+    z-index: 3;
+    text-align: left;
+    transition: opacity .3s;
+    @include phones {
+        width: rem(200px);
+        height: rem(250px);
+        overflow: scroll;
+    }
+}
+
+.ingridients__btn__close {
+    position: absolute;
+    width: rem(30px);
+    height: rem(30px);
+    right: 0;
+    top: -1%;
+    font-size: rem(24px);
+    line-height: 1.4;
+    text-align: center;
+    color: $orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.float-ingridients-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.float-ingridients-main-text {
+    color: #fff;
+    font-family: 'Gagalin', Arial, Helvetica, sans-serif;
+    font-size: rem(12px);
+    text-align: center;
+    @include phones {
+        font-size: rem(10px);
+    }
+}
+
+.float-ingridients__item {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.3125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingridients__img {
+    vertical-align: baseline;
+}
+.ingridients__text {
+    padding-right: 6%;
+}
+
+.float-ingridients__kkal-img {
+    width: 60%;
+    height: 60%;
+}
+
+.block__float-ingridients__kkal {
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 5.625rem;
+    height: 5.625rem;
+    text-align: center;
+    z-index: 1;
+    @include tablets {
+        top: 10px;
+        left: initial;
+        right: 114px;
+        bottom: 0;
+    }
+    @include phones {
+        top: 9.5%;
+        padding: 3px 13px;
+    }
+    @include iphone6 {
+        right: 0;
+    }
+    &::before {
+        display: block;
+        content: '1200';
+        position: absolute;
+        font-family: 'Gagalin', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include phones {
+            font-size: 12px;
+        }
+        @include phonesOld {
+            font-size: 11px;
+            top: 53%;
+        }
+    }
+}
+

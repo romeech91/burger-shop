@@ -1,0 +1,103 @@
+
+html {
+    font-size: 16px;
+    @include tablets {
+        font-size: 14px;
+    }
+    @include phones {
+        font-size: 13px;
+    }
+}
+
+h4 {
+    margin: 0;
+}
+
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$orange: #e25028;
+$yellow: #f8b43a;
+$green: #8ac04e;
+$dark: #2f3234;
+$white: #ffffff;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.maincont {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+    transition: 1s;
+    will-change: transform;
+    
+}
+
+
+.container {
+    max-width: rem(1100px);
+    width: 100%;
+    min-height: rem(650px);
+    margin: 0 auto;
+    display: flex;
+    @include desktop {
+        width: rem(970px);
+    }
+    @include laptop {
+        width: rem(750px);
+    }
+    @include tablets {
+        width: rem(480px);
+    }
+    @include phones {
+        width: 30rem;
+    }
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.title-dark {
+    color: $dark;
+}
+
+.title-white {
+    color: $white;
+}
+
+.title-yellow {
+    color: $yellow;
+}
+
+.section-title {
+    font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: rem(72px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: rem(30px);
+    margin-top: 0;
+    @include phonesOld {
+        font-size: 3.5rem;
+    }
+}

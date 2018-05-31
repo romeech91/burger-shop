@@ -1,0 +1,128 @@
+
+.team {
+    background: url('../img/bg__team.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &__title {
+        display: flex;
+        margin-left: rem(15px);
+        @include tablets {
+            justify-content: center;
+        }
+    }
+    &__block {
+        height: 100%;
+        background-color: #2e2c2c;
+        opacity: 0.9;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__inner {
+            display: flex;
+            flex-direction: column;
+        }
+        &-heading {
+            color: $yellow;
+            text-transform: uppercase;
+            font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4.4rem;
+            font-weight: 300;
+            padding-left: 6rem;
+            margin: 0;
+        }
+        &__list {
+            list-style: none;
+            color: #fff;
+        }
+        &__item {
+            text-transform: uppercase;
+            font-family: 'Gagalin', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            @include tablets {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.team-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+
+.block__item-drop {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    margin-left: rem(22px);
+    margin-top: rem(13px);
+    &-img {
+        width: rem(100px);
+        height: rem(100px);
+        border-radius: 50%;
+        overflow: hidden;
+        flex-basis: 100%;
+        max-width: rem(100px);
+    }
+    &-text {
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: none;
+        font-size: 0.9rem;
+        max-width: 15rem;
+        margin-left: 1rem;
+        &__heading {
+            margin: 0;
+        }
+        &__contain {
+            margin-top: rem(10px);
+            line-height: 1.4rem;
+        }
+    }
+}
+
+.team__block__item--active {
+    .block__item-btn {
+        color: $yellow;
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+    .block__item-drop {
+        height: auto;
+    }
+}
+
+.block__item-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    &:hover {
+        color: $yellow;
+    }
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid $yellow;
+        margin-right: 0.8rem;
+        transition: .4s;
+    }
+}

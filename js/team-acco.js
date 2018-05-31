@@ -1,4 +1,3 @@
-/* team__block__item--active */
 
 const itemList = document.querySelector('.team__block__list');
 const items = document.querySelectorAll('.team__block__item');

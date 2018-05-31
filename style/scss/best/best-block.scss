@@ -1,0 +1,96 @@
+
+.we_best__block {
+    height: rem(650px);
+    background: url('../img/bg_white.png') center center no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-best {
+    @include phones {
+        font-size: 2.7rem;
+    }
+}
+
+.we_best__container {
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.we_best__block__heading {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.features__item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 28%;
+    vertical-align: top;
+    margin: 0 rem(20px);
+    overflow: hidden;
+    @include tablets {
+        margin: 0;
+    }
+    &-heading {
+        display: block;
+        font-family: 'Lifehack', sans-serif;
+        font-size: rem(24px);
+        margin: rem(15px) 0;
+        @include tablets {
+            font-size: rem(20px);
+        }
+    }
+    &-text {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #463030;
+        font-family: 'Ubuntu';
+        font-size: 0.875rem;
+        line-height: rem(26.2px);
+        @include phones {
+            line-height: 1.2;
+            font-size: 0.8rem;
+            padding: 0 5px;
+        }
+        font-weight: 300;
+        color: $dark;
+        overflow: hidden;
+    }
+    &-pic {
+        min-height: 6rem;
+        @include phones {
+            min-height: 4.1rem;
+        }
+        &_meat {
+            background: url('../img/icons/best/best_meat.svg') center center no-repeat;
+            background-size: contain;
+        }
+        &_hand {
+            background: url('../img/icons/best/best_hand.svg') center center no-repeat;
+            background-size: contain;
+        }
+        &_natural {
+            background: url('../img/icons/best/best_natural.svg') center center no-repeat;
+            background-size: contain;
+        }
+    }
+}

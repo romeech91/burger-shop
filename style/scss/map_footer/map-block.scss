@@ -1,0 +1,89 @@
+
+.map {
+    overflow: hidden;
+    position: relative;
+}
+
+.footer {
+    height: rem(60px);
+    @include phones {
+        height: 5.75rem;
+    }
+    width: 100%;
+    background: url('../img/bg__footer.png') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.footer__left {
+    width: 50%;
+    height: rem(56px);
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(10px);
+    @include phones {
+        width: 100%;
+        align-items: center;
+    }
+    &-top {
+        padding-top: rem(5px);
+    }
+    &-bottom {
+        display: flex;
+        padding-top: rem(7px);
+    }
+    &-img {
+        background: url('../img/icons/phone.svg') center center no-repeat;
+        width: rem(16px);
+        height: rem(16px);
+    }
+    &-number {
+        color: red;
+        text-decoration: none;
+    }
+}
+
+.footer__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: rem(10px);
+    @include phones {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer__container {
+    max-width: rem(1100px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: rem(17px);
+    fill: #595959;
+    width: rem(25px);
+    height: rem(25px);
+    transition: .4s;
+}
+
+.icon:hover {
+    fill: #fff;
+}
+
+.icon:first-child {
+    margin-left: 0;
+}
